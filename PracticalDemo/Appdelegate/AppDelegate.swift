@@ -10,11 +10,14 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
+    
+    let arrQuestion:[String] = ["What is your name?","Who is the best cricketer in the world?","What are the colors in the indian national flag?"]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        DatabaseHelper.instance.openDataBase()
         return true
     }
 
